@@ -1,0 +1,40 @@
+/* ===========================
+   CUSTOM FONT: SaveurSans
+   =========================== */
+
+/* Light (300) */
+@font-face {
+  font-family: 'SaveurSans';
+  src: url('SaveurSans-Light.otf') format('otf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular (400) */
+@font-face {
+  font-family: 'SaveurSans';
+  src: url('SaveurSans-Regular.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Semibold (600) */
+@font-face {
+  font-family: 'SaveurSans';
+  src: url('SaveurSans-Semi-bold.otf') format('otf');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold (700) */
+@font-face {
+  font-family: 'SaveurSans';
+  src: url('SaveurSans-Bold.otf') format('otf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
