@@ -88,7 +88,7 @@ img {
 
 .container {
   border: 1px solid blue;
-  width: 86%;
+  width: 94%;
   margin-inline: auto;
   max-width: var(--container-max-width-lg);
 }
@@ -154,7 +154,7 @@ img {
 
 .text .container {
   display: flex;
-  gap: var(--space-sm) var(--space-md);
+  gap: var(--space-xs) var(--space-md);
   flex-wrap: wrap;
 }
 
