@@ -29,6 +29,44 @@
 
 <body>
 
+
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+
+    <div class="wrapped">
+      <figure class="navbar__logo">
+        <img src="./img/logo.png" alt="">
+      </figure>
+
+      <div class="navbar__toggle" onclick="toggleNavbar()">
+        <span class="navbar__toggle__item"></span>
+        <span class="navbar__toggle__item"></span>
+      </div>
+
+    </div>
+
+    <div class="navbar__menu">
+      <ul class="navbar__menu__list">
+        <li><a href=""><i class="fa-solid fa-house-chimney-window"></i>Homepage</a></li>
+        <li class="dropdown" onclick="toggleDropdown(this)"><i class="fa-solid fa-circle-info"></i>I Deck<i class="fa-solid fa-chevron-down dropdown__icon"></i>
+          <ul class="sub-menu">
+            <li><a href="">Strategika</a></li>
+            <li><a href="">Strategika Kids</a></li>
+          </ul>
+        </li>
+        <li><a href=""><i class="fa-solid fa-comment"></i>Contatti</a></li>
+      </ul>
+      <a class="navbar__menu__cta button button--primary">Call to Action<i class="fa-solid fa-circle-right"></i></a>
+      <span class="navbar__menu__credits">Design by <a href="">GeForGe 🔥</a></span>
+
+    </div>
+  </div>
+</nav>
+
+
+
 <!-- Text Block -->
 <section class="text text--center text--color-light-indigo">
   <div class="container">
