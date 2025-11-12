@@ -1,11 +1,5 @@
 /*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
 /* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
 
 /* ==========================================================================
    Base styles
@@ -35,17 +29,17 @@
   --container-max-width-sm: 740px;
 
   /* Spacing scale */
-  --space-xxl: 6rem; /* ~96px */
-  --space-xl: 5rem; /* ~80px */
-  --space-lg: 4rem; /* ~64px */
-  --space-md: 3rem; /* ~48px */
-  --space-sm: 2rem; /* ~32px */
+  --space-xxxl: 8rem; /* ~80px */
+  --space-xxl: 5rem; /* ~80px */
+  --space-xl: 4rem; /* ~64px */
+  --space-lg: 3rem; /* ~48px */
+  --space-md: 2rem; /* ~32px */
+  --space-sm: 1.5rem; /* ~24px */
   --space-xs: 1rem; /* ~16px */
 
   /* Shadow */
   --shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
 }
-
 
 *,
 *:before,
@@ -59,15 +53,13 @@
   margin-block-end: 0;
 }
 
-
 body {
   font-family: 'CorporativeSansRd', sans-serif;
   color: var(--color-prussian-blue);
 }
 
 section {
-  /*border: 1px solid red;*/
-  margin-block-start: var(--space-xl)
+  margin-block-start: var(--space-xxxl);
 }
 
 h1, h2, h3, h4, h5, h6, p, li {
@@ -77,12 +69,12 @@ h1, h2, h3, h4, h5, h6, p, li {
 
 p, ul, ol {
   font-size: var(--font-size-md);
-  opacity: 0.5;
+  opacity: 0.70;
   line-height: 1.5;
 }
 
 ul, ol {
-  margin-left: var(--space-sm)
+  margin-left: var(--space-md);
 }
 
 img {
@@ -92,17 +84,15 @@ img {
 }
 
 .container {
-  /*border: 1px solid blue;*/
   width: var(--container-width);
   margin-inline: auto;
   max-width: var(--container-max-width-lg);
 }
 
-
 /* ==========================================================================
    Helpers
    ========================================================================== */
-
+/* (aggiungi qui eventuali utility classes) */
 
 /* ==========================================================================
    Button
@@ -138,7 +128,6 @@ img {
 }
 
 .button--primary:hover {
-  color: var(--color-amour);
   background: linear-gradient(90deg, var(--color-prussian-blue), var(--color-prussian-blue));
 }
 
@@ -151,7 +140,6 @@ img {
   color: var(--color-amour);
   background: var(--color-light-indigo);
 }
-
 
 /* ==========================================================================
  *  Navbar
@@ -177,9 +165,9 @@ img {
   align-items: center;
   background: white;
   border-radius: 0.5rem;
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
   box-shadow: var(--shadow);
-  row-gap: var(--space-md);
+  row-gap: var(--space-lg);
   flex-wrap: wrap;
 }
 
@@ -191,7 +179,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .navbar__logo {
@@ -203,9 +191,8 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: var(--space-md);
   list-style: none;
-  gap: var(--space-sm);
-
   padding-inline-start: 0;
   margin-left: 0;
 }
@@ -250,14 +237,14 @@ img {
 
 .navbar__menu__list .dropdown .sub-menu {
   position: absolute;
-  top: var(--space-xl);
+  top: var(--space-xxl);
   left: 50%;
   background: white;
-  padding: var(--space-sm);
+  padding: var(--space-md);
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-md);
   box-shadow: var(--shadow);
   border-radius: 0.75rem;
   margin-left: 0;
@@ -300,7 +287,6 @@ img {
   margin: 0;
 }
 
-
 .navbar__toggle {
   position: relative;
   cursor: pointer;
@@ -320,7 +306,6 @@ img {
   border-radius: 2px;
   transition: 0.5s;
 }
-
 
 .navbar__toggle__item:nth-child(1) {
   transform: translateY(calc(-50% - 3px)) rotate(0);
@@ -342,12 +327,11 @@ img {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
 
   .navbar .container {
     display: block;
-    padding: 1.5rem;
-
+    padding: var(--space-md);
   }
 
   .navbar__logo {
@@ -366,7 +350,7 @@ img {
   }
 
   .navbar__toggle {
-    display: block
+    display: block;
   }
 
   .navbar .wrapped {
@@ -379,7 +363,7 @@ img {
   .navbar__menu__list {
     display: flex;
     flex-direction: column;
-    gap: var(--space-sm);
+    gap: var(--space-md);
     width: 100%;
   }
 
@@ -390,10 +374,8 @@ img {
     transition: 0.5s;
     opacity: 0;
     visibility: hidden;
-    gap: var(--space-lg);
+    gap: var(--space-xl);
     align-items: flex-start;
-
-
   }
 
   .navbar__menu--open {
@@ -403,8 +385,8 @@ img {
   }
 
   .navbar__menu__list {
-    margin-top: var(--space-lg) !important;
-    gap: var(--space-md);
+    margin-top: var(--space-xl) !important;
+    gap: var(--space-lg);
   }
 
   .navbar__menu__list li {
@@ -425,7 +407,7 @@ img {
     top: 0;
     left: 0;
     background: unset;
-    padding: var(--space-xs) var(--space-sm);
+    padding: var(--space-xs) var(--space-md);
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -448,14 +430,13 @@ img {
   }
 }
 
-
 /* ==========================================================================
    Text Block
    ========================================================================== */
 
 .text .container {
   display: flex;
-  gap: var(--space-xs) var(--space-md);
+  gap: var(--space-xs) var(--space-lg);
   flex-wrap: wrap;
 }
 
@@ -488,7 +469,7 @@ img {
 }
 
 .text--center .text__heading__media {
-  margin-inline: auto
+  margin-inline: auto;
 }
 
 .text--side .text__heading,
@@ -496,16 +477,19 @@ img {
   flex: 1 0 400px;
 }
 
-
 /* ==========================================================================
    Features Block
    ========================================================================== */
+
+.features {
+  margin-block-start: var(--space-xl);
+}
 
 .features .container {
   display: flex;
   align-items: start;
   justify-content: center;
-  gap: var(--space-md);
+  gap: var(--space-lg);
   flex-wrap: wrap;
 }
 
@@ -522,7 +506,7 @@ img {
 }
 
 .feature:hover .feature__image {
-  transform: translateY(-25%)
+  transform: translateY(-25%);
 }
 
 .feature__text h3 {
@@ -533,15 +517,15 @@ img {
   font-size: var(--font-size-sm);
 }
 
-
 /* ==========================================================================
    Banner Block
    ========================================================================== */
 
 .banner .container {
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-xxl) var(--space-lg);
   color: var(--color-amour);
   border-radius: 1rem;
+  position: relative;
 }
 
 .banner--prussian-blue .container {
@@ -556,15 +540,15 @@ img {
   background: var(--color-light-indigo);
 }
 
+
 .banner__tagline {
   position: absolute;
   top: 0;
-  left: var(--space-md);
+  left: var(--space-lg);
   color: var(--color-lava);
   font-family: 'SaveurSans', sans-serif;
   text-transform: uppercase;
   transform: translateY(-125%);
-
 }
 
 .banner__tagline h2 {
@@ -578,11 +562,10 @@ img {
   font-size: var(--font-size-md);
 }
 
-
 .banner__layout {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .banner__layout .banner__column--intro {
@@ -599,7 +582,7 @@ img {
 .banner__layout .banner__column--content {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-md);
+  gap: var(--space-lg);
 }
 
 .banner__layout .banner__group {
@@ -608,24 +591,25 @@ img {
 
 .banner__group .banner__subtitle {
   font-size: var(--font-size-lg);
-  margin-block-end: var(--space-sm);
+  margin-block-end: var(--space-md);
 }
 
 .banner__group .banner__grid {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-md);
   padding-left: var(--space-xs);
   border-left: 1px solid var(--color-amour);
 }
 
 .banner__grid .banner__item {
-  display: flex;;
+  display: flex;
   align-items: center;
   gap: var(--space-xs);
 }
 
 .banner__grid .banner__item-media {
+  width: 30%;
   max-width: 4rem;
   transition: 0.5s;
 }
@@ -637,14 +621,19 @@ img {
 .banner__grid .banner__item-text p {
   font-size: var(--font-size-sm);
   opacity: 0.75;
-
 }
 
-@media (max-width: 840px) {
+@media (max-width: 1024px) {
   .banner__layout {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-sm);
+    gap: var(--space-md);
+  }
+}
+
+@media (max-width: 600px) {
+  .banner .container {
+    padding: var(--space-xl) var(--space-md);
   }
 }
 
@@ -652,21 +641,24 @@ img {
 /* ==========================================================================
  *  Cards
  * ========================================================================== */
+.cards {
+  margin-block-start: var(--space-xl);
+}
+
 .cards .container {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
   justify-content: center;
-
 }
 
 .cards .card {
-  flex: 1 1 400px;
+  flex: 1 1 350px;
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
   color: var(--color-amour);
-  padding: var(--space-md) var(--space-sm);
+  padding: var(--space-lg) var(--space-md);
   border-radius: 1rem;
 }
 
@@ -704,4 +696,6 @@ img {
 
 .card__body p {
   font-size: var(--font-size-sm);
+  text-align: justify;
 }
+
