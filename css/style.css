@@ -154,8 +154,8 @@ img {
 
 
 /* ==========================================================================
-   Navbar
-   ========================================================================== */
+ *  Navbar
+ * ========================================================================== */
 .navbar {
   width: 100%;
   position: fixed;
@@ -164,13 +164,10 @@ img {
   z-index: 999;
 }
 
-.navbar ul,
-.navbar ol,
-.navbar li {
+.navbar ul, .navbar ol, .navbar li {
   opacity: 1;
   margin: 0;
   padding: 0;
-
 }
 
 .navbar .container {
@@ -186,7 +183,7 @@ img {
   flex-wrap: wrap;
 }
 
-.navbar__menu__credits{
+.navbar__menu__credits {
   display: none;
 }
 
@@ -219,11 +216,6 @@ img {
   opacity: 0.95;
 }
 
-
-.navbar__menu__list li a:hover {
-
-}
-
 .navbar__menu__list li a,
 .navbar__menu__list .dropdown {
   position: relative;
@@ -239,12 +231,13 @@ img {
   white-space: nowrap;
 }
 
-.navbar__menu__list li i{
+.navbar__menu__list li i {
   font-size: var(--font-size-md);
 }
 
 .navbar__menu__list .dropdown {
   display: inline-flex;
+  cursor: pointer;
 }
 
 .navbar__menu__list .dropdown .dropdown__icon {
@@ -260,11 +253,11 @@ img {
   top: var(--space-xl);
   left: 50%;
   background: white;
-  padding: var(--space-xs) var(--space-sm);
+  padding: var(--space-sm);
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
   box-shadow: var(--shadow);
   border-radius: 0.75rem;
   margin-left: 0;
@@ -283,7 +276,6 @@ img {
 
 .navbar__menu__list li {
   position: relative;
-  cursor: pointer;
   display: flex;
   align-items: center;
 }
@@ -296,7 +288,7 @@ img {
   height: 3px;
   width: 0;
   border-radius: 2px;
-  background: var(--color-lava);
+  background: var(--color-amour);
   transition: 0.5s;
 }
 
@@ -346,7 +338,7 @@ img {
   transform: translateY(calc(-50%)) rotate(-45deg);
 }
 
-.navbar__toggle{
+.navbar__toggle {
   display: none;
 }
 
@@ -358,24 +350,26 @@ img {
 
   }
 
-  .navbar__logo{
+  .navbar__logo {
     max-width: 130px;
   }
 
-  .navbar__menu__credits{
+  .navbar__menu__credits {
     width: 100%;
     display: block;
     text-align: right;
     font-size: 0.75rem;
   }
 
-  .navbar__menu__credits a{
+  .navbar__menu__credits a {
     color: inherit;
   }
 
-  .navbar__toggle{display: block}
+  .navbar__toggle {
+    display: block
+  }
 
-  .navbar .wrapped{
+  .navbar .wrapped {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -402,13 +396,13 @@ img {
 
   }
 
-  .navbar__menu--open{
+  .navbar__menu--open {
     max-height: 999px;
     visibility: visible;
     opacity: 1;
   }
 
-  .navbar__menu__list{
+  .navbar__menu__list {
     margin-top: var(--space-lg) !important;
     gap: var(--space-md);
   }
@@ -422,7 +416,7 @@ img {
     font-size: var(--font-size-md);
   }
 
-  .navbar__menu__list li::after{
+  .navbar__menu__list li::after {
     display: none;
   }
 
@@ -646,11 +640,68 @@ img {
 
 }
 
-
 @media (max-width: 840px) {
   .banner__layout {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-sm);
   }
+}
+
+
+/* ==========================================================================
+ *  Cards
+ * ========================================================================== */
+.cards .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  justify-content: center;
+
+}
+
+.cards .card {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  color: var(--color-amour);
+  padding: var(--space-md) var(--space-sm);
+  border-radius: 1rem;
+}
+
+.card--color-prussian-blue {
+  background: var(--color-prussian-blue);
+}
+
+.card--color-lava {
+  background: var(--color-lava);
+}
+
+.card--color-light-indigo {
+  background: var(--color-light-indigo);
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.card__header__icon {
+  max-width: 48px;
+  width: 30%;
+  transition: 0.5s;
+}
+
+.cards .card:hover .card__header__icon {
+  transform: translateY(-25%);
+}
+
+.card__header h3 {
+  font-size: var(--font-size-lg);
+}
+
+.card__body p {
+  font-size: var(--font-size-sm);
 }
