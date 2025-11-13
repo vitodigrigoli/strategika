@@ -21,3 +21,10 @@ const toggleNavbar = () => {
   toggle.classList.toggle('navbar__toggle--open');
   menu.classList.toggle('navbar__menu--open');
 }
+
+const accordions = document.querySelectorAll('.accordion');
+
+const toggleAccordion = (el) => {
+  accordions.forEach((accordion) => {if (accordion !== el) accordion.classList.remove('accordion--open') });
+  el.classList.toggle('accordion--open');
+}
