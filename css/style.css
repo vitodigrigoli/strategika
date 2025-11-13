@@ -77,6 +77,10 @@ ul, ol {
   margin-left: var(--space-md);
 }
 
+a {
+  color: inherit;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -726,7 +730,6 @@ img {
   flex: 1 1 300px;
 }
 
-
 .bento__item img {
   width: 100%;
   height: 100%;
@@ -860,6 +863,11 @@ img {
   mask-position: center;
   height: 100%;
   object-fit: cover;
+  transition: 0.5s;
+}
+
+.testimonial__media:hover img {
+  transform: scale(1.05);
 }
 
 .testimonial--reverse .testimonial__media {
@@ -950,6 +958,7 @@ img {
   border-radius: 0.25rem;
   color: var(--color-jet);
   overflow: hidden;
+  cursor: pointer;
 }
 
 
@@ -976,12 +985,10 @@ img {
 }
 
 .accordion__content {
-  font-size: var(--font-size-sm);
   max-height: 0;
   transition: 0.25s;
   visibility: hidden;
   opacity: 0;
-
 }
 
 .accordion--open .accordion__content {
@@ -991,7 +998,197 @@ img {
   padding: var(--space-xs) 0;
 }
 
+.accordion__content p {
+  font-size: var(--font-size-sm);
+}
 
+
+/* ==========================================================================
+ *  Footer
+ * ========================================================================== */
+
+.footer {
+  margin-block-start: var(--space-xxxl);
+  margin-block-end: var(--space-xs);
+}
+
+.footer {
+  margin-block-end: 0.5rem; /* o un valore fisso */
+}
+
+
+.footer ul {
+  margin-left: 0;
+  opacity: 1;
+
+}
+
+.footer ul li {
+  opacity: 1;
+}
+
+.footer a {
+  opacity: 0.75;
+  transition: 0.5s;
+}
+
+.footer a:hover {
+  opacity: 1
+}
+
+.footer .container {
+  padding: var(--space-xxl) var(--space-xxl) var(--space-xs) var(--space-xxl);
+  background: var(--color-prussian-blue);
+  color: var(--color-amour);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  width: 100%;
+}
+
+.footer__brand {
+  margin-inline: auto;
+}
+
+.footer__logo{
+  max-width: 300px;
+  margin-inline: auto;
+}
+
+.footer__social {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  justify-content: center;
+  margin-top: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.footer__social-item {
+  margin: 0;
+}
+
+.footer__social-item a {
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  color: var(--color-amour);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+.footer__social-item a:hover {
+  opacity: 1;
+}
+
+.footer__social-item a i {
+  font-size: var(--font-size-lg);
+}
+
+.footer__info {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-lg);
+  flex: 1 1 200px;
+}
+.footer__links{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.footer__links-list {
+  list-style: none;
+  padding-inline-start: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.footer__links-list li{
+  margin-block-end: 0;
+  font-size: unset;
+}
+
+.footer__links-list a {
+  color: var(--color-amour);
+  text-decoration: none;
+  font-size: var(--font-size-md);
+  display: block;
+
+}
+
+.footer__legal{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.footer__legal p,
+.footer__links-list a{
+  font-size: var(--font-size-sm);
+  margin-block-end: 0;
+}
+
+.footer__title{
+ margin-block-end: 0;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__bottom p {
+  font-size: 0.75rem;
+  margin: 0;
+  color: var(--color-amour);
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+.footer__bottom p a {
+  color: inherit;
+}
+
+@media (max-width: 860px) {
+
+  .footer .container {
+    padding: var(--space-xl) var(--space-md) var(--space-md) var(--space-md);
+  }
+  .footer__info {
+    justify-content: space-evenly;
+  }
+
+  .footer__inner{
+    flex-direction: column;
+  }
+
+  .footer__bottom p {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer .container {
+    padding: var(--space-xl) var(--space-sm) var(--space-sm) var(--space-sm);
+  }
+
+}
 
 
 
