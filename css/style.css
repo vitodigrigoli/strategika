@@ -2,8 +2,8 @@
 /* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
 
 /* ==========================================================================
-   Base styles
-   ========================================================================== */
+ * Base styles
+ * ========================================================================== */
 
 :root {
 
@@ -29,13 +29,13 @@
   --container-max-width-sm: 740px;
 
   /* Spacing scale */
-  --space-xxxl: 8rem; /* ~80px */
-  --space-xxl: 5rem; /* ~80px */
-  --space-xl: 4rem; /* ~64px */
-  --space-lg: 3rem; /* ~48px */
-  --space-md: 2rem; /* ~32px */
-  --space-sm: 1.5rem; /* ~24px */
-  --space-xs: 1rem; /* ~16px */
+  --space-xxxl: 8rem;   /* ~128px */
+  --space-xxl: 5rem;    /* ~80px */
+  --space-xl: 4rem;     /* ~64px */
+  --space-lg: 3rem;     /* ~48px */
+  --space-md: 2rem;     /* ~32px */
+  --space-sm: 1.5rem;   /* ~24px */
+  --space-xs: 1rem;     /* ~16px */
 
   /* Shadow */
   --shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
@@ -90,9 +90,9 @@ img {
 }
 
 /* ==========================================================================
-   Helpers
-   ========================================================================== */
-/* (aggiungi qui eventuali utility classes) */
+ * Helpers
+ * ========================================================================== */
+
 
 /* ==========================================================================
    Button
@@ -144,6 +144,7 @@ img {
 /* ==========================================================================
  *  Navbar
  * ========================================================================== */
+
 .navbar {
   width: 100%;
   position: fixed;
@@ -431,8 +432,8 @@ img {
 }
 
 /* ==========================================================================
-   Text Block
-   ========================================================================== */
+ * Text Block
+ * ========================================================================== */
 
 .text .container {
   display: flex;
@@ -478,8 +479,8 @@ img {
 }
 
 /* ==========================================================================
-   Features Block
-   ========================================================================== */
+ * Features Block
+ * ========================================================================== */
 
 .features {
   margin-block-start: var(--space-xl);
@@ -518,8 +519,8 @@ img {
 }
 
 /* ==========================================================================
-   Banner Block
-   ========================================================================== */
+ *  Banner Block
+ * ========================================================================== */
 
 .banner .container {
   padding: var(--space-xxl) var(--space-lg);
@@ -565,7 +566,7 @@ img {
 .banner__layout {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: var(--space-md);
+  gap: var(--space-xl) var(--space-md);
 }
 
 .banner__layout .banner__column--intro {
@@ -582,7 +583,7 @@ img {
 .banner__layout .banner__column--content {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-lg);
+  gap: var(--space-xl) var(--space-md);
 }
 
 .banner__layout .banner__group {
@@ -627,7 +628,6 @@ img {
   .banner__layout {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-md);
   }
 }
 
@@ -635,12 +635,17 @@ img {
   .banner .container {
     padding: var(--space-xl) var(--space-md);
   }
+
+  .banner__tagline {
+    left: var(--space-md);
+  }
 }
 
 
 /* ==========================================================================
  *  Cards
  * ========================================================================== */
+
 .cards {
   margin-block-start: var(--space-xl);
 }
@@ -698,4 +703,109 @@ img {
   font-size: var(--font-size-sm);
   text-align: justify;
 }
+
+/* ==========================================================================
+ *  Bento Grid
+ * ========================================================================== */
+
+.bento .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.bento__item {
+  border-radius: 1rem;
+  overflow: hidden;
+  flex: 1 1 500px;
+}
+
+.bento__item:nth-child(5n+3),
+.bento__item:nth-child(5n+4),
+.bento__item:nth-child(5n+5) {
+  flex: 1 1 300px;
+}
+
+
+.bento__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.bento__item img:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* ==========================================================================
+ *  Media Panel
+ * ========================================================================== */
+
+.media-panel .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
+
+.media-panel--reverse .container {
+  flex-direction: row-reverse;
+}
+
+.media-panel__image{
+  border-radius: 1rem;
+  overflow: hidden;
+  flex: 1 1 350px;
+}
+
+.media-panel__image img {
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.media-panel__image:hover img{
+  transform: scale(1.1);
+}
+
+.media-panel__text {
+  flex: 1 1 450px;
+}
+
+.media-panel__text__tagline {
+  font-size: var(--font-size-sm);
+  display: block;
+  margin-block-end: var(--space-xs);
+  font-family: "SaveurSans", sans-serif;
+  text-transform: uppercase;
+  color: var(--color-light-indigo);
+}
+
+.media-panel__text__heading{
+  font-size: var(--font-size-xl);
+}
+
+.media-panel__text__heading p{
+  font-size: var(--font-size-sm);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
