@@ -435,6 +435,125 @@ img {
   }
 }
 
+
+
+/* ==========================================================================
+ * Header
+ * ========================================================================== */
+.header{
+  background: rgba(91, 111, 199, 0.1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-block: 10rem 6rem;
+  min-height: 60vh;
+}
+
+.header .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+}
+
+.header__text{
+  width: 50%;
+}
+
+.header__media{
+  width: 45%;
+  margin-inline: auto;
+  max-width: 400px;
+}
+
+.header__text h1{
+  text-indent: -9999px;
+  overflow: hidden;
+  position: absolute ;
+  width: 1px ;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.header__text h2{
+  font-size: var(--font-size-xxl);
+}
+
+.logo-slideshow{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: var(--space-sm);
+  background: white;
+  padding: var(--space-md);
+  border-radius: 1rem;
+  width: var(--container-width);
+  max-width: var(--container-max-width-sm);
+  box-shadow: var(--shadow);
+}
+
+.logo-slideshow__item {
+  width: 30%;
+  max-width: 120px;
+}
+.logo-slideshow__item img{
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-slideshow__tagline {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  color: var(--color-lava);
+  font-family: 'SaveurSans', sans-serif;
+  text-transform: uppercase;
+  transform: translateY(-125%) translateX(-50%);
+}
+
+.logo-slideshow__tagline h2{
+  font-size: var(--font-size-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 1ch;
+  white-space: nowrap;
+}
+
+.logo-slideshow__tagline h2 i{
+  font-size: var(--font-size-md);
+}
+
+@media (max-width: 768px) {
+  .header .container{
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .header__media,
+  .header__text{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
  * Text Block
  * ========================================================================== */
@@ -451,6 +570,10 @@ img {
 
 .text__heading h2 {
   font-size: var(--font-size-xxl);
+}
+
+.text__body p:last-child {
+  margin-block-end: 0;
 }
 
 .text--color-prussian-blue .text__heading h2 {
@@ -794,6 +917,11 @@ img {
 .media-panel__text__body {
   border-left: 2px solid var(--color-amour);
   padding-left: var(--space-xs);
+  margin-block-start: var(--space-sm);
+}
+
+.media-panel__text .button{
+  margin-block-start: var(--space-sm);
 }
 
 .media-panel__text__body p {
